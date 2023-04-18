@@ -12,7 +12,14 @@ class Musica{
 
   public:
     Musica();
+    ~Musica();
     Musica(string titulo, string artista);
+
+    void setTitulo(string titulo);
+    void setArtista(string artista);
+
+    string getTitulo();
+    string getArtista();
 
 };
     
