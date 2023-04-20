@@ -20,11 +20,13 @@ class Musica{
 
     string getTitulo();
     string getArtista();
+    void imprimirDados();
+
 
 };
     
 #endif // !
-#define MUSICA_H
+
 
 
 

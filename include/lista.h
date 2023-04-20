@@ -5,7 +5,7 @@
 #define LISTA_H
 
 struct Node {
-  Musica musica;
+  Musica data;
   Node* next;
 
   Node(Musica);

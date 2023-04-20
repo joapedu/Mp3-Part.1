@@ -2,10 +2,9 @@
 
 <div align="center">
 <h4>⭐️ Project making a Mp3 using C++ at the college subject "Programing Language". ⭐️</h4>
-  <img height= "50" src="https://upload.wikimedia.org/wikipedia/commons/1/13/Cmake.svg">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://http://linguagemc.com.br/o-que-e-linguagem-c//"><img height= "35" src= "https://img.shields.io/badge/c++-35495E?style=for-the-badge&logo=c&logoColor=4FC08D">&nbsp;&nbsp;&nbsp;&nbsp;</a><img src="https://img.icons8.com/cute-clipart/64/null/services.png"/><a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img height= "50" src="https://www.svgrepo.com/show/270190/mp3.svg">
+  <a href="https://http://linguagemc.com.br/o-que-e-linguagem-c//"><img height= "35" src= "https://img.shields.io/badge/c++-35495E?style=for-the-badge&logo=c&logoColor=4FC08D">&nbsp;&nbsp;&nbsp;&nbsp;</a><img src="https://img.icons8.com/cute-clipart/64/null/services.png"/><a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img height= "50" src= "https://www.svgrepo.com/show/270190/mp3.svg">
 </a>
 </div>
-
 
 <br />
 <h3 align="center"> 👾 Colaborador: <a href="https://github.com/joapedu"><strong>@joapedu</strong></a></h3>
