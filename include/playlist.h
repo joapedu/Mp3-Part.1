@@ -19,7 +19,7 @@ class Playlist{
 
     void setNome(string nome);
 
-    void adicionarMusica();
+    void adicionarMusica(Musica m);
     void removerMusica();
     void printarPlaylist();
 

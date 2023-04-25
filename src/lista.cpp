@@ -17,6 +17,10 @@ void Lista::remover(int index){
 
 };
 
+void Lista::buscar(int index){
+
+};
+
 void Lista::printLista(){
 
 };

@@ -15,6 +15,7 @@ class Lista {
 
     void adicionar(int value);
     void remover(int index);
+    void buscar(int index);
     void printLista();
 
 };

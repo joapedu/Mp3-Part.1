@@ -18,20 +18,18 @@ void Playlist::setNome(string nome){
   this->nome = nome;
 };
 
-void Musica::setArtista(string artista){
-  this->artista = artista;
+void Playlist::adicionarMusica(Musica m){
+  musica.push_back(m);
 };
 
-string Musica::getTitulo(){
-  return titulo;
-};
+void Playlist::removerMusica(){
 
-string Musica::getArtista(){
-  return artista;
 };
+ 
+void Playlist::printarPlaylist(){
+  for(int i = 0, i < musica.size(), i++){
+    cout << "Música: " << musica[i].getTitulo() << endl;
+  }
 
-void Musica::imprimirDados(){
-  cout << "Titulo: " << titulo << endl;
-  cout << "Artista: " << artista << endl;
-}
+};
 
