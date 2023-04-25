@@ -3,6 +3,12 @@
 
 using namespace std;
 
+void adicionarMusica(){
+  string titulo, artista;
+
+
+}
+
 void musicaSelection(){
 
   int escolha;
@@ -15,7 +21,7 @@ void musicaSelection(){
 
   cin >> escolha;
 
-  switch (escolha) {
+   switch (escolha) {
     case 1:
     case 2:
     case 0:
