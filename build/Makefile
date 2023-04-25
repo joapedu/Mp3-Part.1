@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/eduardo/Documentos/UF/lp1/unidade1/projeto/Mp3-Cpp
+CMAKE_SOURCE_DIR = /home/eduardo/Documentos/Mp3-Cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/eduardo/Documentos/UF/lp1/unidade1/projeto/Mp3-Cpp/build
+CMAKE_BINARY_DIR = /home/eduardo/Documentos/Mp3-Cpp/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eduardo/Documentos/UF/lp1/unidade1/projeto/Mp3-Cpp/build/CMakeFiles /home/eduardo/Documentos/UF/lp1/unidade1/projeto/Mp3-Cpp/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eduardo/Documentos/Mp3-Cpp/build/CMakeFiles /home/eduardo/Documentos/Mp3-Cpp/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eduardo/Documentos/UF/lp1/unidade1/projeto/Mp3-Cpp/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eduardo/Documentos/Mp3-Cpp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +128,30 @@ mp3: cmake_check_build_system
 mp3/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3.dir/build.make CMakeFiles/mp3.dir/build
 .PHONY : mp3/fast
+
+src/lista.o: src/lista.cpp.o
+.PHONY : src/lista.o
+
+# target to build an object file
+src/lista.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3.dir/build.make CMakeFiles/mp3.dir/src/lista.cpp.o
+.PHONY : src/lista.cpp.o
+
+src/lista.i: src/lista.cpp.i
+.PHONY : src/lista.i
+
+# target to preprocess a source file
+src/lista.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3.dir/build.make CMakeFiles/mp3.dir/src/lista.cpp.i
+.PHONY : src/lista.cpp.i
+
+src/lista.s: src/lista.cpp.s
+.PHONY : src/lista.s
+
+# target to generate assembly for a file
+src/lista.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3.dir/build.make CMakeFiles/mp3.dir/src/lista.cpp.s
+.PHONY : src/lista.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -177,6 +201,30 @@ src/musica.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3.dir/build.make CMakeFiles/mp3.dir/src/musica.cpp.s
 .PHONY : src/musica.cpp.s
 
+src/playlist.o: src/playlist.cpp.o
+.PHONY : src/playlist.o
+
+# target to build an object file
+src/playlist.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3.dir/build.make CMakeFiles/mp3.dir/src/playlist.cpp.o
+.PHONY : src/playlist.cpp.o
+
+src/playlist.i: src/playlist.cpp.i
+.PHONY : src/playlist.i
+
+# target to preprocess a source file
+src/playlist.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3.dir/build.make CMakeFiles/mp3.dir/src/playlist.cpp.i
+.PHONY : src/playlist.cpp.i
+
+src/playlist.s: src/playlist.cpp.s
+.PHONY : src/playlist.s
+
+# target to generate assembly for a file
+src/playlist.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3.dir/build.make CMakeFiles/mp3.dir/src/playlist.cpp.s
+.PHONY : src/playlist.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +234,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... mp3"
+	@echo "... src/lista.o"
+	@echo "... src/lista.i"
+	@echo "... src/lista.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/musica.o"
 	@echo "... src/musica.i"
 	@echo "... src/musica.s"
+	@echo "... src/playlist.o"
+	@echo "... src/playlist.i"
+	@echo "... src/playlist.s"
 .PHONY : help
 
 

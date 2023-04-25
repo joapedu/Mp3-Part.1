@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/mp3.dir/src/main.cpp.o CMakeFiles/mp3.dir/src/musica.cpp.o -o mp3 
+/usr/bin/c++ CMakeFiles/mp3.dir/src/main.cpp.o CMakeFiles/mp3.dir/src/musica.cpp.o CMakeFiles/mp3.dir/src/playlist.cpp.o CMakeFiles/mp3.dir/src/lista.cpp.o -o mp3 

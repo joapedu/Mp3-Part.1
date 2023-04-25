@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/eduardo/Documentos/UF/lp1/unidade1/projeto/Mp3-Cpp/include
+CXX_INCLUDES = -I/home/eduardo/Documentos/Mp3-Cpp/include
 
 CXX_FLAGS = 
 
