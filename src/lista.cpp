@@ -1,26 +1,46 @@
 #include <iostream>
 #include "../include/lista.h"
 
-using namespace std;
-
-Lista::Lista(){
-  head = nullptr;
+template<typename T>
+Lista<T>::Lista(){
+  this->head = nullptr;
 };
 
-Lista::~Lista(){};
+template<typename T>
+Lista<T>::~Lista(){};
 
-void Lista::adicionar(int value){
-  
+template<typename T>
+void Lista<T>::adicionar(T data){
+
+  Node<T> *newNode = new Node<T>(data);  
+  if (head == nullptr) {  
+    head = newNode;  
+    return;  
+  }  
+  Node<T> *temp = head;  
+  while (temp->next != nullptr) {  
+    temp = temp->next;  
+  }  
+  temp->next = newNode;  
+
 };
 
-void Lista::remover(int index){
+template<typename T>
+void Lista<T>::remover(int index){
 
 };
 
-void Lista::buscar(int index){
+template<typename T>
+void Lista<T>::buscar(int index){
 
 };
 
-void Lista::printLista(){
-
+template<typename T>
+void Lista<T>::printLista(){
+  Node<T> *temp = head;  
+  while (temp != nullptr) {  
+    std::cout << temp->data << " ";  
+    temp = temp->next;  
+  }  
+  std::cout << std::endl;    
 };

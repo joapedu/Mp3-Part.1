@@ -22,13 +22,16 @@ void Playlist::adicionarMusica(Musica m){
   musica.push_back(m);
 };
 
-void Playlist::removerMusica(){
-
+void Playlist::removerMusica(int index){
+  musica.erase(musica.begin() + index);
 };
  
 void Playlist::printarPlaylist(){
-  for(int i = 0, i < musica.size(), i++){
-    cout << "Música: " << musica[i].getTitulo() << endl;
+
+  cout << "Músicas: " << endl;
+
+  for(int i = 0, i < musica.size(), i++) {
+    cout << i << " - " << musica[i].getTitulo() << endl;
   }
 
 };
