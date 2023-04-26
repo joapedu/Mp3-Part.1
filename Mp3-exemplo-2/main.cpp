@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 #include <limits>
-#include "../include/musica.h"
+#include "../include/musica.hpp"
 
 using namespace std;
 
@@ -11,15 +11,34 @@ vector<string> artistas;
 
 //adicionar
 void adicionarMusica(){
+  int escolha;
+  cout << "1 - Adicionar Música " << endl;
+  cout << "0 - Retornar" << endl;
+  cin >> escolha;
+
   string artista, titulo;
-  cout << "Digite o nome do artista: ";
-  getline(cin, artista);
 
-  cout << "Digite o nome da música: ";
-  getline(cin, titulo);
+  switch (escolha) {
+    case 1:
+      for(int i = 0; i < 1; i++){
+        cout << "Digite o nome do artista: ";
+        getline(cin, artista);
+        artistas.push_back(artista);
+  }
 
-  artistas.push_back(artista);
-  titulos.push_back(titulo);
+      for(int j = 0; j < 1; j++){
+        cout << "Digite o nome da música: ";
+        getline(cin, titulo);
+        titulos.push_back(titulo);
+  }
+      return adicionarMusica();
+    
+    break;
+    
+    case 0:
+      return ;
+      break;
+  }
 }
 
 //listar
@@ -70,13 +89,13 @@ void musicaSelection(){
    switch (escolha) {
     case 1:
       adicionarMusica();
-
+      break;
     case 2:
       listarMusicas();
-
+      break;
     case 3:
       removerMusica();
-
+      break;
     case 0:
       return ;
   }
@@ -103,10 +122,10 @@ int main(){
   switch (escolha) {
     case 1:
       musicaSelection();
-
+      break;
     case 2:
       playlistSelection();
-
+      break;
     case 0:
       cout << "Finalizando o programa..." << endl;
       return 0;
