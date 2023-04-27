@@ -6,7 +6,7 @@
 #ifndef MUSICA_HPP
 #define MUSICA_HPP
 
-using namespace std;
+using namespace std; // to type string
 
 class Musica {
     private:
