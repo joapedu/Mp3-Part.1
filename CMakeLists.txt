@@ -7,4 +7,5 @@ include_directories( include )
 add_executable( mp3
                 src/main.cpp
                 src/musica.cpp
+                src/playlist.cpp
               )

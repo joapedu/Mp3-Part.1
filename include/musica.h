@@ -18,12 +18,14 @@ class Musica{
     void setTitulo(string titulo);
     void setArtista(string artista);
 
-    string getTitulo();
-    string getArtista();
+    string getTitulo() const;
+    string getArtista() const;
     void imprimirDados();
 
 
 };
+
+ostream& operator<<(ostream& os, const Musica& musica);
     
 #endif // !
 

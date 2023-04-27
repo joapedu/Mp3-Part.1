@@ -1,3 +1,0 @@
-/home/eduardo/Documentos/UF/lp1/unidade1/projeto/Mp3-Cpp/build/CMakeFiles/mp3.dir
-/home/eduardo/Documentos/UF/lp1/unidade1/projeto/Mp3-Cpp/build/CMakeFiles/edit_cache.dir
-/home/eduardo/Documentos/UF/lp1/unidade1/projeto/Mp3-Cpp/build/CMakeFiles/rebuild_cache.dir

@@ -3,14 +3,15 @@
 #ifndef NODE_H
 #define NODE_H
 
+template<typename T>
 class Node{
   public:
-    int data;
+    T data;
     Node* next;
 
-    Node(int value) {
-      data = value;
-      next = nullptr;
+    Node(T data) {
+      this->data = data;
+      this->next = nullptr;
     }
 
 };
