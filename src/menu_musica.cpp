@@ -41,15 +41,25 @@ void adicionarMusica(){
 
 };
 
+void buscarMusica(){
+  int index;
+
+  cout << "Digite o index da música: " << endl;
+
+  cin >> index;
+
+  lista.buscar(index);
+
+};
+
 void musicaSelection(){
   
   int escolha;
-  string titulo, artista;
-
 
   cout << "1 - Adicionar Música " << endl;
   cout << "2 - Listar todas as Músicas" << endl;
-  cout << "3 - Deletar Música " << endl;
+  cout << "3 - Buscar Música " << endl;
+  cout << "4 - Deletar Música" << endl;
   cout << "0 - Retornar " << endl;
 
   cin >> escolha;
@@ -64,6 +74,10 @@ void musicaSelection(){
       break;
 
     case 3:
+      buscarMusica();
+      break;
+
+    case 4:
       removerMusica();
       break;
 

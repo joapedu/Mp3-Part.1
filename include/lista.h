@@ -51,7 +51,13 @@ class Lista {
       }
     };
 
-    void buscar(int index);
+    void buscar(int index){
+      //int indexElement;
+      //Node<T> *temp = head;
+      //if (index == temp){
+      //  std::cout << temp->data << std::endl;
+      //}
+    };
 
     void printLista(){
       int index;
