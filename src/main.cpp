@@ -1,70 +1,7 @@
 #include <iostream>
-#include "../include/musica.h"
-#include "../include/playlist.h"
-#include "../include/lista.h"
+#include "menu.cpp"
 
 using namespace std;
-
-void adicionarMusica(){
-  Musica m;
-  string titulo, artista;
-
-  
-  cout << "Digite um Titulo: ";
-  cin >> titulo;
-
-  cout << "Digite o artista: ";
-  cin >> artista;
-
-  m.setTitulo(titulo);
-  m.setArtista(artista);
-
-  m.imprimirDados();
-
-  return;
-
-};
-
-void listarMusicas(){
-  return;
-};
-
-void removerMusica(){
-  return;
-};
-
-
-void musicaSelection(){
-
-  int escolha;
-  string titulo, artista;
-
-  cout << "1 - Adicionar Música " << endl;
-  cout << "2 - Listar todas as Músicas" << endl;
-  cout << "3 - Deletar Música " << endl;
-  cout << "0 - Retornar " << endl;
-
-  cin >> escolha;
-
-   switch (escolha) {
-    case 1:
-      adicionarMusica();
-
-    case 2:
-      listarMusicas();
-
-    case 3:
-      removerMusica();
-
-    case 0:
-      return ;
-  }
-
-}
-
-void playlistSelection(){
-
-}
 
 int main(){
 
@@ -80,9 +17,11 @@ int main(){
   switch (escolha) {
     case 1:
       musicaSelection();
+      break;
 
     case 2:
       playlistSelection();
+      break;
 
     case 0:
       cout << "Finalizando o programa..." << endl;
@@ -90,6 +29,7 @@ int main(){
 
     default:
       cout << "Opção Inválida" << endl;
+      break;
   }
 
   return main();

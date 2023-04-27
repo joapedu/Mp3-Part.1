@@ -132,6 +132,7 @@ CMakeFiles/mp3.dir/src/main.cpp.o: \
  /usr/include/c++/12.2.0/bits/basic_ios.tcc \
  /usr/include/c++/12.2.0/bits/ostream.tcc /usr/include/c++/12.2.0/istream \
  /usr/include/c++/12.2.0/bits/istream.tcc \
+ /home/eduardo/Documentos/Mp3-Cpp/src/menu.cpp \
  /home/eduardo/Documentos/Mp3-Cpp/src/../include/musica.h \
  /home/eduardo/Documentos/Mp3-Cpp/src/../include/playlist.h \
  /usr/include/c++/12.2.0/vector \

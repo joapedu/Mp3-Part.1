@@ -1,35 +1,35 @@
 #include <iostream>
 #include "../include/lista.h"
 
-template<typename T>
-Lista<T>::Lista(){
-  this->head = nullptr;
-};
+//template<typename T>
+//Lista<T>::Lista(){
+//  this->head = nullptr;
+//};
 
-template<typename T>
-Lista<T>::~Lista(){};
+//template<typename T>
+//Lista<T>::~Lista(){};
 
-template<typename T>
-void Lista<T>::adicionar(T data){
+//template<typename T>
+//void Lista<T>::adicionar(T data){
 
-  Node<T> *newNode = new Node<T>(data);  
-  if (head == nullptr) {  
-    head = newNode;  
-    return;  
-  }  
-  Node<T> *temp = head;  
-  while (temp->next != nullptr) {  
-    temp = temp->next;  
-  }  
-  temp->next = newNode;  
+//  Node<T> *newNode = new Node<T>(data);  
+//  if (head == nullptr) {  
+//    head = newNode;  
+//    return;  
+//  }  
+//  Node<T> *temp = head;  
+//  while (temp->next != nullptr) {  
+//    temp = temp->next;  
+//  }  
+//  temp->next = newNode;  
 
-};
+//};
 
 template<typename T>
 void Lista<T>::remover(int index){
 
       if(index < 1) {
-        std::cout << "\nposition should be >= 1.";
+        std::cout << "\nEscolha um valor maior ou igual a 1";
       } else if (index == 1 && head != NULL) { 
         Node<T> *nodeToDelete = head;
         head = head->next;
@@ -46,7 +46,7 @@ void Lista<T>::remover(int index){
             temp->next = temp->next->next;
             free(nodeToDelete); 
         } else {
-          std::cout<<"\nThe node is already null.";
+          std::cout<<"\nEste Index já se encontra nulo";
         }       
       }
 
@@ -57,14 +57,14 @@ void Lista<T>::buscar(int index){
 
 };
 
-template<typename T>
-void Lista<T>::printLista(){
+//template<typename T>
+//void Lista<T>::printLista(){
 
-  Node<T> *temp = head;  
-  while (temp != nullptr) {  
-    std::cout << temp->data << " ";  
-    temp = temp->next;  
-  }  
-  std::cout << std::endl;    
+//  Node<T> *temp = head;  
+//  while (temp != nullptr) {  
+//    std::cout << temp->data << " ";  
+//    temp = temp->next;  
+//  }  
+//  std::cout << std::endl;    
 
-};
+//};

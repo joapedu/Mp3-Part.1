@@ -20,11 +20,11 @@ void Musica::setArtista(string artista){
   this->artista = artista;
 };
 
-string Musica::getTitulo(){
+string Musica::getTitulo() const {
   return titulo;
 };
 
-string Musica::getArtista(){
+string Musica::getArtista() const {
   return artista;
 };
 
@@ -33,3 +33,8 @@ void Musica::imprimirDados(){
   cout << "Artista: " << artista << endl;
 }
 
+ostream& operator<<(ostream& os, const Musica& musica){
+  os << musica.getTitulo() << " - " << musica.getArtista() << endl;
+
+  return os;
+}
