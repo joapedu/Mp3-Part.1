@@ -28,6 +28,28 @@ void Lista<T>::adicionar(T data){
 template<typename T>
 void Lista<T>::remover(int index){
 
+      if(index < 1) {
+        std::cout << "\nposition should be >= 1.";
+      } else if (index == 1 && head != NULL) { 
+        Node<T> *nodeToDelete = head;
+        head = head->next;
+        free(nodeToDelete);
+      } else {
+        Node<T> *temp = head;
+        for(int i = 1; i < index-1; i++) {
+          if(temp != NULL) {
+            temp = temp->next;
+          }
+        }
+        if(temp != NULL && temp->next != NULL) {
+            Node<T> *nodeToDelete = temp->next;
+            temp->next = temp->next->next;
+            free(nodeToDelete); 
+        } else {
+          std::cout<<"\nThe node is already null.";
+        }       
+      }
+
 };
 
 template<typename T>
@@ -37,10 +59,12 @@ void Lista<T>::buscar(int index){
 
 template<typename T>
 void Lista<T>::printLista(){
+
   Node<T> *temp = head;  
   while (temp != nullptr) {  
     std::cout << temp->data << " ";  
     temp = temp->next;  
   }  
   std::cout << std::endl;    
+
 };

@@ -30,7 +30,7 @@ void Playlist::printarPlaylist(){
 
   cout << "Músicas: " << endl;
 
-  for(int i = 0, i < musica.size(), i++) {
+  for(int i = 0; i < musica.size(); i++) {
     cout << i << " - " << musica[i].getTitulo() << endl;
   }
 

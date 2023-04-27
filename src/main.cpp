@@ -1,13 +1,38 @@
 #include <iostream>
 #include "../include/musica.h"
+#include "../include/playlist.h"
+#include "../include/lista.h"
 
 using namespace std;
 
 void adicionarMusica(){
+  Musica m;
   string titulo, artista;
 
+  
+  cout << "Digite um Titulo: ";
+  cin >> titulo;
 
-}
+  cout << "Digite o artista: ";
+  cin >> artista;
+
+  m.setTitulo(titulo);
+  m.setArtista(artista);
+
+  m.imprimirDados();
+
+  return;
+
+};
+
+void listarMusicas(){
+  return;
+};
+
+void removerMusica(){
+  return;
+};
+
 
 void musicaSelection(){
 
@@ -23,7 +48,14 @@ void musicaSelection(){
 
    switch (escolha) {
     case 1:
+      adicionarMusica();
+
     case 2:
+      listarMusicas();
+
+    case 3:
+      removerMusica();
+
     case 0:
       return ;
   }
