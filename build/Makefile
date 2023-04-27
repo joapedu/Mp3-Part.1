@@ -129,30 +129,6 @@ mp3/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3.dir/build.make CMakeFiles/mp3.dir/build
 .PHONY : mp3/fast
 
-src/lista.o: src/lista.cpp.o
-.PHONY : src/lista.o
-
-# target to build an object file
-src/lista.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3.dir/build.make CMakeFiles/mp3.dir/src/lista.cpp.o
-.PHONY : src/lista.cpp.o
-
-src/lista.i: src/lista.cpp.i
-.PHONY : src/lista.i
-
-# target to preprocess a source file
-src/lista.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3.dir/build.make CMakeFiles/mp3.dir/src/lista.cpp.i
-.PHONY : src/lista.cpp.i
-
-src/lista.s: src/lista.cpp.s
-.PHONY : src/lista.s
-
-# target to generate assembly for a file
-src/lista.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3.dir/build.make CMakeFiles/mp3.dir/src/lista.cpp.s
-.PHONY : src/lista.cpp.s
-
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -234,9 +210,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... mp3"
-	@echo "... src/lista.o"
-	@echo "... src/lista.i"
-	@echo "... src/lista.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

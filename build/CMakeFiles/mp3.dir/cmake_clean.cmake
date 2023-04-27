@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/mp3.dir/src/lista.cpp.o"
-  "CMakeFiles/mp3.dir/src/lista.cpp.o.d"
   "CMakeFiles/mp3.dir/src/main.cpp.o"
   "CMakeFiles/mp3.dir/src/main.cpp.o.d"
   "CMakeFiles/mp3.dir/src/musica.cpp.o"

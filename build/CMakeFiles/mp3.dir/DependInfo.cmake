@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/eduardo/Documentos/Mp3-Cpp/src/lista.cpp" "CMakeFiles/mp3.dir/src/lista.cpp.o" "gcc" "CMakeFiles/mp3.dir/src/lista.cpp.o.d"
   "/home/eduardo/Documentos/Mp3-Cpp/src/main.cpp" "CMakeFiles/mp3.dir/src/main.cpp.o" "gcc" "CMakeFiles/mp3.dir/src/main.cpp.o.d"
   "/home/eduardo/Documentos/Mp3-Cpp/src/musica.cpp" "CMakeFiles/mp3.dir/src/musica.cpp.o" "gcc" "CMakeFiles/mp3.dir/src/musica.cpp.o.d"
   "/home/eduardo/Documentos/Mp3-Cpp/src/playlist.cpp" "CMakeFiles/mp3.dir/src/playlist.cpp.o" "gcc" "CMakeFiles/mp3.dir/src/playlist.cpp.o.d"

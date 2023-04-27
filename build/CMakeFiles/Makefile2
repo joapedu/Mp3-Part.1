@@ -81,12 +81,12 @@ clean: CMakeFiles/mp3.dir/clean
 CMakeFiles/mp3.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3.dir/build.make CMakeFiles/mp3.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3.dir/build.make CMakeFiles/mp3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eduardo/Documentos/Mp3-Cpp/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target mp3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eduardo/Documentos/Mp3-Cpp/build/CMakeFiles --progress-num=1,2,3,4 "Built target mp3"
 .PHONY : CMakeFiles/mp3.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mp3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eduardo/Documentos/Mp3-Cpp/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eduardo/Documentos/Mp3-Cpp/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mp3.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eduardo/Documentos/Mp3-Cpp/build/CMakeFiles 0
 .PHONY : CMakeFiles/mp3.dir/rule
