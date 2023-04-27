@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.25.1)
+cmake_minimum_required(VERSION 3.16.3)
 project(mp3Player VERSION 0.1 LANGUAGES CXX )
 
 include_directories( include )
