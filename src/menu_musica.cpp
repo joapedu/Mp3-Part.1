@@ -1,7 +1,5 @@
-#include <string>
 #include <iostream>
 #include "../include/musica.h"
-#include "../include/playlist.h"
 #include "../include/lista.h"
 
 using namespace std;
@@ -76,10 +74,6 @@ void musicaSelection(){
       cout << "Escolha Inválida" << endl;
       break;
   }
-
-}
-
-void playlistSelection(){
 
 }
 

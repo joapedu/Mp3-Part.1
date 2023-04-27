@@ -1,5 +1,6 @@
 #include <iostream>
-#include "menu.cpp"
+#include "menu_musica.cpp"
+#include "menu_playlist.cpp"
 
 using namespace std;
 
