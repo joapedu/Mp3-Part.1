@@ -3,30 +3,28 @@
 #ifndef MUSICA_H
 #define MUSICA_H
 
-using namespace std;
-
 class Musica{
   private:
-    string titulo;
-    string artista;
+    std::string titulo;
+    std::string artista;
 
   public:
     Musica();
     ~Musica();
-    Musica(string titulo, string artista);
+    Musica(std::string titulo, std::string artista);
 
-    void setTitulo(string titulo);
-    void setArtista(string artista);
+    void setTitulo(std::string titulo);
+    void setArtista(std::string artista);
 
-    string getTitulo() const;
-    string getArtista() const;
+    std::string getTitulo() const;
+    std::string getArtista() const;
     void imprimirDados();
 
 
 };
 
-ostream& operator<<(ostream& os, const Musica& musica);
-    
+std::ostream& operator<<(std::ostream& os, const Musica& musica);
+
 #endif // !
 
 

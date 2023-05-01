@@ -1,6 +1,8 @@
 #include <iostream>
+#include <string>
 #include "../include/musica.h"
 #include "../include/lista.h"
+
 
 using namespace std;
 
@@ -13,10 +15,12 @@ void listarMusicas(){
 };
 
 void removerMusica(){
+
   listarMusicas();
+
   int index;
 
-  cout << "Selecione um index das músicas listadas: ";
+  cout << "Selecione o index das músicas listadas: ";
 
   cin >> index;
 
@@ -29,10 +33,10 @@ void adicionarMusica(){
   string titulo, artista;
  
   cout << "Digite um Titulo: ";
-  cin >> titulo;
+  getline(cin.ignore(), titulo);
 
   cout << "Digite o artista: ";
-  cin >> artista;
+  getline(cin, artista);
 
   mus.setTitulo(titulo);
   mus.setArtista(artista);
@@ -44,12 +48,10 @@ void adicionarMusica(){
 void musicaSelection(){
   
   int escolha;
-  string titulo, artista;
-
 
   cout << "1 - Adicionar Música " << endl;
   cout << "2 - Listar todas as Músicas" << endl;
-  cout << "3 - Deletar Música " << endl;
+  cout << "3 - Deletar Música" << endl;
   cout << "0 - Retornar " << endl;
 
   cin >> escolha;

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "node.h"
+#include "musica.h"
 
 #ifndef LISTA_H
 #define LISTA_H
@@ -29,7 +30,7 @@ class Lista {
 
     void remover(int index){
       if(index < 1) {
-        std::cout << "\nEscolha um valor maior ou igual a 1";
+        std::cout << "\nEscolha um valor maior ou igual a 1" << std::endl;
       } else if (index == 1 && head != NULL) { 
         Node<T> *nodeToDelete = head;
         head = head->next;
@@ -46,12 +47,27 @@ class Lista {
             temp->next = temp->next->next;
             free(nodeToDelete); 
         } else {
-          std::cout<<"\nEste Index já se encontra nulo";
+          std::cout<<"\nEste Index já se encontra nulo" << std::endl;
         }       
-      }
+      } 
     };
 
-    void buscar(int index);
+    T dataIndex(int index){
+
+      if (index < 1){
+        std::cout << "\nEscolha um valor maior ou igual a 1" << std::endl;
+      }
+
+      Node<T> *temp = head;
+      int currentIndex = 1;
+      while (temp != nullptr) {
+          if (currentIndex == index) {
+              return temp->data;
+          }
+          temp = temp->next;
+          currentIndex++;
+       }
+    };
 
     void printLista(){
       int index;
@@ -67,6 +83,8 @@ class Lista {
 
 };
 
+//template<typename T>
+extern Lista<Musica> lista;
 
 #endif // !LISTA_H
 
