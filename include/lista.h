@@ -29,7 +29,7 @@ class Lista {
 
     void remover(int index){
       if(index < 1) {
-        std::cout << "\nEscolha um valor maior ou igual a 1";
+        std::cout << "\nEscolha um valor maior ou igual a 1" << std::endl;
       } else if (index == 1 && head != NULL) { 
         Node<T> *nodeToDelete = head;
         head = head->next;
@@ -46,7 +46,7 @@ class Lista {
             temp->next = temp->next->next;
             free(nodeToDelete); 
         } else {
-          std::cout<<"\nEste Index já se encontra nulo";
+          std::cout<<"\nEste Index já se encontra nulo" << std::endl;
         }       
       }
     };

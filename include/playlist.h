@@ -19,11 +19,14 @@ class Playlist{
 
     void setNome(string nome);
 
+    string getNome() const;
+
     void adicionarMusica(Musica m);
     void removerMusica(int index);
     void printarPlaylist();
 
 };
- 
+
+ostream& operator<<(ostream& os, const Playlist& playlist);
 
 #endif

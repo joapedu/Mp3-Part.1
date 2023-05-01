@@ -18,6 +18,10 @@ void Playlist::setNome(string nome){
   this->nome = nome;
 };
 
+string Playlist::getNome() const {
+  return this->nome;
+}
+
 void Playlist::adicionarMusica(Musica m){
   musica.push_back(m);
 };
@@ -36,3 +40,8 @@ void Playlist::printarPlaylist(){
 
 };
 
+ostream& operator<<(ostream& os, const Playlist& playlist){
+  os << playlist.getNome() << endl;
+
+  return os;
+}

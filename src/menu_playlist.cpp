@@ -2,13 +2,28 @@
 #include "../include/playlist.h"
 #include "../include/lista.h"
 
+using namespace std;
+
+Lista<Playlist> listaa;
+
 void listarPlaylist(){
 
 };
 
 void adicionarPlaylist(){
   Playlist playlist;
+  string nome;
+  int index;
+ 
+  cout << "Digite o nome da Playlist: " << endl;
 
+  cin >> nome;
+
+  listaa.printLista();
+
+  cout << "Selecione a música pelo seu indice: " << endl;
+
+  cin >> index;
   
 
 };

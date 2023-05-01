@@ -26,7 +26,7 @@ class Musica{
 };
 
 ostream& operator<<(ostream& os, const Musica& musica);
-    
+
 #endif // !
 
 
