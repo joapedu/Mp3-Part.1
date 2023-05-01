@@ -8,28 +8,28 @@ using namespace std;
 
 Lista<Musica> lista;
 
-void listarMusicas(){
+void listarMusicas(){ //funcao que chama printa os elementos da lista que contem as musicas
 
   lista.printLista();
 
 };
 
-void removerMusica(){
+void removerMusica(){ //remove as musicas de acordo com o index
 
-  listarMusicas();
+  listarMusicas(); //chama a funcao da linha 11
 
-  int index;
+  int index; 
 
   cout << "Selecione o index das músicas listadas: ";
 
   cin >> index;
 
-  lista.remover(index);
+  lista.remover(index); //chamando a funcao da lista encadeada
 
 };
 
-void adicionarMusica(){
-  Musica mus;
+void adicionarMusica(){ // funcao para adicionar musicas a playlist
+  Musica mus; //passando o parametro mus
   string titulo, artista;
  
   cout << "Digite um Titulo: ";
@@ -41,11 +41,11 @@ void adicionarMusica(){
   mus.setTitulo(titulo);
   mus.setArtista(artista);
 
-  lista.adicionar(mus);
+  lista.adicionar(mus); //chamando a funcao adicionar da lista encadeada
 
 };
 
-void musicaSelection(){
+void musicaSelection(){ //funcao para gerenciar as opcoes da area da musica
   
   int escolha;
 
