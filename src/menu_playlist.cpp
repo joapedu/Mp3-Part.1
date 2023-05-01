@@ -1,38 +1,55 @@
 #include <iostream>
 #include "../include/playlist.h"
 #include "../include/lista.h"
+#include "../include/musica.h"
 
 using namespace std;
 
-Lista<Playlist> listaa;
+Playlist playlist;
+vector<Playlist> playlists;
 
 void listarPlaylist(){
+
+  playlist.printarPlaylist();
 
 };
 
 void adicionarPlaylist(){
-  Playlist playlist;
+
   string nome;
   int index;
  
-  cout << "Digite o nome da Playlist: " << endl;
-
+  cout << "Digite o nome da Playlist: ";
   cin >> nome;
 
-  listaa.printLista();
+  lista.printLista();
 
-  cout << "Selecione a música pelo seu indice: " << endl;
-
+  cout << "Selecione a música pelo seu indice: ";
   cin >> index;
-  
+
+  playlist.setNome(nome);
+  playlist.adicionarMusica(lista.dataIndex(index));
 
 };
 
-void buscarPlaylist(){
+void editarPlaylist(){
+  int index;
+
+  cout << "Selecione uma playlist: ";
 
 };
 
-void removerPlaylist(){
+void removerMus(){
+
+  int indexMusica;
+
+  playlist.printarPlaylist(); 
+
+  cout << "Escolhas algum das musicas p/ remover pelo index: ";
+  cin >> indexMusica;
+  indexMusica -= 1;
+
+  playlist.removerMusica(indexMusica);
 
 };
 
@@ -42,8 +59,8 @@ void playlistSelection(){
 
   cout << "1 - Criar Playlist " << endl;
   cout << "2 - Listar todas as Playlists" << endl;
-  cout << "3 - Buscar Playlist " << endl;
-  cout << "4 - Deletar Playlist" << endl;
+  cout << "3 - Editar Playlist " << endl;
+  cout << "4 - Remover Musica" << endl;
   cout << "0 - Retornar " << endl;
 
   cin >> escolha;
@@ -58,11 +75,11 @@ void playlistSelection(){
       break;
 
     case 3:
-      buscarPlaylist();
+      editarPlaylist();
       break;
 
     case 4:
-      removerPlaylist();
+      removerMus();
       break;
 
     case 0:

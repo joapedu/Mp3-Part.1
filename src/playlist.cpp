@@ -3,6 +3,7 @@
 #include "../include/musica.h"
 #include "../include/playlist.h"
 
+
 using namespace std;
 
 Playlist::Playlist(){};
@@ -26,22 +27,40 @@ void Playlist::adicionarMusica(Musica m){
   musica.push_back(m);
 };
 
+void Playlist::editarPlaylist(int index, Musica newM){
+  if (index >= 0 && index < musica.size()) {
+    musica[index] = newM;
+    cout << "Música editada com sucesso!" << endl;
+  } else {
+     cout << "Índice inválido!" << endl;
+  }
+};
+
 void Playlist::removerMusica(int index){
-  musica.erase(musica.begin() + index);
+  if (index >= 0 && index < musica.size()) {
+    musica.erase(musica.begin() + index);
+    cout << "Música removida com sucesso!" << endl;
+  } else {
+    cout << "Índice inválido!" << endl;
+  }
 };
  
-void Playlist::printarPlaylist(){
+void Playlist::printarPlaylist() const{
+  int index = 0;
 
-  cout << "Músicas: " << endl;
+  cout << "Nome da Playlist: " << nome << endl;
 
-  for(int i = 0; i < musica.size(); i++) {
-    cout << i << " - " << musica[i].getTitulo() << endl;
+  cout << "Musica: " << endl;
+
+  for (const auto& musicas : musica ){
+    index++;
+    cout << index << " " << musicas << endl;
   }
-
+  
 };
 
 ostream& operator<<(ostream& os, const Playlist& playlist){
-  os << playlist.getNome() << endl;
+  os << "Nome da Playlist: " << playlist.getNome() << endl;
 
   return os;
 }
