@@ -6,16 +6,16 @@ using namespace std;
 
 int main(){
 
-  int escolha;
+  int escolha; 
 
   cout << "Escolha uma das opções: " << endl;
   cout << "1 - Área da(s) Musica(s) " << endl;
   cout << "2 - Área da(s) Playlist(s) " << endl;
-  cout << "0 - Encerrar Programa " << endl;
+  cout << "0 - Encerrar Programa " << endl; //printa para o usuario as opções 
   
-  cin >> escolha;
+  cin >> escolha; //pegando a escolha do usuario
 
-  switch (escolha) {
+  switch (escolha) { //switch-case para chamar ou a função da musica, ou da playlist ou sair do programa
     case 1:
       musicaSelection();
       break;
@@ -29,9 +29,9 @@ int main(){
       return 0;
 
     default:
-      cout << "Opção Inválida" << endl;
+      cout << "Opção Inválida" << endl; 
       break;
   }
 
-  return main();
+  return main(); //recursão
 }

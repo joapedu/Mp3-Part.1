@@ -6,15 +6,15 @@
 using namespace std;
 
 Playlist playlist;
-vector<Playlist> playlists;
 
-void listarPlaylist(){
 
-  playlist.printarPlaylist();
+void listarPlaylist(){ //lista a playlist criada
+
+  playlist.printarPlaylist(); //chamando a funcao da classe Playlist
 
 };
 
-void adicionarPlaylist(){
+void adicionarPlaylist(){ //funcao para adicionar musicas a playlist
 
   string nome;
   int index;
@@ -22,38 +22,40 @@ void adicionarPlaylist(){
   cout << "Digite o nome da Playlist: ";
   cin >> nome;
 
-  lista.printLista();
+  lista.printLista(); //printando a lista de musicas cadastradas
 
   cout << "Selecione a música pelo seu indice: ";
   cin >> index;
 
-  playlist.setNome(nome);
-  playlist.adicionarMusica(lista.dataIndex(index));
+  playlist.setNome(nome); //setando o nome da playlist
+  playlist.adicionarMusica(lista.dataIndex(index)); /* a funcao adicionarMusica precisa de um objeto da classe musica
+                                                      para isto ocorrer pelo index, é necessario passar o valor retornado da função
+                                                      dataIndex, que por sua vez contém o valor indicado pelo usuario */
 
 };
 
-void editarPlaylist(){
+void editarPlaylist(){ //funcao que sem uso
   int index;
 
   cout << "Selecione uma playlist: ";
 
 };
 
-void removerMus(){
+void removerMus(){ //funcao para remover musicas da playlist
 
   int indexMusica;
 
-  playlist.printarPlaylist(); 
+  playlist.printarPlaylist(); //e printado as musicas novamente e o usuario devera escolher a que quer remover daquela playlist
 
   cout << "Escolhas algum das musicas p/ remover pelo index: ";
   cin >> indexMusica;
-  indexMusica -= 1;
+  indexMusica -= 1; //passando o valor real para a vector, ja que se passar o valor digitado pelo usuario, nao sera o mesmo utilizado no vector
 
-  playlist.removerMusica(indexMusica);
+  playlist.removerMusica(indexMusica); //chamando a funcao para remover
 
 };
 
-void playlistSelection(){
+void playlistSelection(){ //funcao responsavel por gerenciar os menus da area de playlist
   
   int escolha;
 
