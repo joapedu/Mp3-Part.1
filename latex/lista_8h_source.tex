@@ -1,0 +1,96 @@
+\doxysection{lista.\+h}
+\hypertarget{lista_8h_source}{}\label{lista_8h_source}\index{include/lista.h@{include/lista.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}node.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}musica.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ LISTA\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ LISTA\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classLista}{Lista}}\ \{\ \textcolor{comment}{//criando\ a\ Classe\ da\ lista\ encadeada\ chamada\ de\ Lista\ usando\ um\ template\ chamado\ de\ T}}
+\DoxyCodeLine{00010\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{classNode}{Node<T>}}\ *head;\ \textcolor{comment}{//ponteiro\ head\ para\ Node,\ representando\ o\ primeiro\ nó\ da\ lista\ encadeada}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classLista}{Lista}}()\ :\ head(\textcolor{keyword}{nullptr})\{\};\ \textcolor{comment}{//construtor\ da\ classe}}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classLista}{\string~Lista}}()\{\};\ \textcolor{comment}{//destrutor\ da\ classe}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ adicionar(T\ data)\{\ \textcolor{comment}{//A\ funcao\ adicionar\ é\ responsável\ por\ adicionar\ um\ novo\ elemento\ a\ lista\ encadeada}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \mbox{\hyperlink{classNode}{Node<T>}}\ *newNode\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classNode}{Node<T>}}(data);\ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (head\ ==\ \textcolor{keyword}{nullptr})\ \{\ \ \textcolor{comment}{//Se\ a\ lista\ estiver\ vazia\ (o\ ponteiro\ head\ é\ nulo),\ o\ novo\ nó\ se\ torna\ o\ primeiro\ nó}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ head\ =\ newNode;\ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};\ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \}\ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \mbox{\hyperlink{classNode}{Node<T>}}\ *temp\ =\ head;\ \ \textcolor{comment}{//Ele\ cria\ um\ novo\ nó\ com\ os\ dados\ passados\ como\ parâmetro\ e\ o\ insere\ no\ final\ da\ lista\ }}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (temp-\/>next\ !=\ \textcolor{keyword}{nullptr})\ \{\ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ temp\ =\ temp-\/>next;\ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \}\ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ temp-\/>next\ =\ newNode;\ \textcolor{comment}{//Caso\ contrário,\ ele\ percorre\ a\ lista\ até\ encontrar\ o\ último\ nó\ e\ insere\ o\ novo\ nó\ lá}}
+\DoxyCodeLine{00028\ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ remover(\textcolor{keywordtype}{int}\ index)\{\ \ \textcolor{comment}{//O\ método\ remover\ é\ responsável\ por\ remover\ um\ elemento\ da\ lista\ com\ base\ no\ index\ fornecido\ pelo\ usuario\ }}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(index\ <\ 1)\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nEscolha\ um\ valor\ maior\ ou\ igual\ a\ 1"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (index\ ==\ 1\ \&\&\ head\ !=\ NULL)\ \{\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNode}{Node<T>}}\ *nodeToDelete\ =\ head;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ head\ =\ head-\/>next;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ free(nodeToDelete);\ \textcolor{comment}{//Se\ o\ índice\ for\ menor\ que\ 1,\ uma\ mensagem\ de\ erro\ é\ exibida.\ Se\ o\ índice\ for\ 1\ e\ a\ lista\ não\ estiver\ vazia,\ o\ primeiro\ nó\ é\ removido\ }}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNode}{Node<T>}}\ *temp\ =\ head;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ index-\/1;\ i++)\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(temp\ !=\ NULL)\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ temp\ =\ temp-\/>next;\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(temp\ !=\ NULL\ \&\&\ temp-\/>next\ !=\ NULL)\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNode}{Node<T>}}\ *nodeToDelete\ =\ temp-\/>next;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ temp-\/>next\ =\ temp-\/>next-\/>next;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ free(nodeToDelete);\ \textcolor{comment}{//Caso\ contrário,\ ele\ percorre\ a\ lista\ até\ o\ nó\ anterior\ ao\ índice\ fornecido\ e\ remove\ o\ próximo\ nó}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}\(\backslash\)nEste\ Index\ já\ se\ encontra\ nulo"{}}\ <<\ std::endl;\ \textcolor{comment}{//Se\ o\ Index\ passado\ representar\ um\ valor\ nulo,\ uma\ mensagem\ e\ exibida}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{00053\ \ \ \ \ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ T\ dataIndex(\textcolor{keywordtype}{int}\ index)\{\ \textcolor{comment}{//A\ função\ dataIndex\ retorna\ o\ valor\ do\ elemento\ da\ lista\ que\ está\ no\ índice\ fornecido.\ Ela\ verifica\ se\ o\ índice\ é\ válido\ (maior\ ou\ igual\ a\ 1)\ e,\ em\ seguida,\ percorre\ a\ lista\ até\ encontrar\ o\ nó\ correspondente\ ao\ índice\ desejado.\ Ao\ encontrar\ o\ nó,\ o\ valor\ armazenado\ em\ data\ desse\ nó\ é\ retornado.}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ <\ 1)\{\ \textcolor{comment}{//Verifica\ se\ o\ index\ passado\ é\ menor\ que\ 1}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nEscolha\ um\ valor\ maior\ ou\ igual\ a\ 1"{}}\ <<\ std::endl;\ \textcolor{comment}{//Caso\ seja,\ ele\ retorna\ um\ erro}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \mbox{\hyperlink{classNode}{Node<T>}}\ *temp\ =\ head;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ currentIndex\ =\ 1;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (temp\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentIndex\ ==\ index)\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ temp-\/>data;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{comment}{//Verifica\ se\ o\ indice\ atual\ é\ igual\ ao\ passado\ pelo\ usuario,\ caso\ seja,\ retorna\ os\ dados\ daquele\ nó}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ temp\ =\ temp-\/>next;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ currentIndex++;\ \textcolor{comment}{//Vai\ adicionando\ valores\ ao\ currentIndex\ ate\ encontrar\ o\ um\ numero\ que\ seja\ igual\ ao\ index\ passado\ pelo\ usuario}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ printLista()\{\ \textcolor{comment}{//A\ função\ printLista\ imprime\ os\ elementos\ da\ lista\ percorrendo\ a\ lista\ a\ partir\ do\ primeiro\ nó\ (head)\ até\ o\ último\ nó}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index;\ \textcolor{comment}{//Valor\ do\ index\ e\ utilizado\ para\ printar\ para\ o\ usuario}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \mbox{\hyperlink{classNode}{Node<T>}}\ *temp\ =\ head;\ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (temp\ !=\ \textcolor{keyword}{nullptr})\ \{\ \textcolor{comment}{//Verifica\ se\ tem\ elementos\ na\ lista}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ index++;\ \textcolor{comment}{//adiciona\ +1\ para\ cada\ elemento\ na\ lista\ para\ index}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ std::cout\ <<\ index\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ temp-\/>data\ <<\ \textcolor{stringliteral}{"{}"{}}\ <<\ std::endl;\ \textcolor{comment}{//Imprimindo\ os\ valores\ de\ index\ e\ o\ valor\ da\ lista\ \ }}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ temp\ =\ temp-\/>next;\ \ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \}\ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ std::cout\ <<\ std::endl;\ \ }
+\DoxyCodeLine{00082\ \ \ \ \ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{classLista}{Lista<Musica>}}\ lista;\ \textcolor{comment}{//tornando\ o\ objeto\ lista\ global\ para\ ser\ utilizado\ nos\ arquivos\ de\ maneira\ mais\ prática}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !LISTA\_H}}
+\DoxyCodeLine{00090\ }
+
+\end{DoxyCode}

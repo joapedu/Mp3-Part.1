@@ -1,0 +1,42 @@
+\doxysection{playlist.\+h}
+\hypertarget{playlist_8h_source}{}\label{playlist_8h_source}\index{include/playlist.h@{include/playlist.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}musica.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}lista.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ PLAYLIST\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ PLAYLIST\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPlaylist}{Playlist}}\{\ \textcolor{comment}{//Criando\ classe\ Playlist}}
+\DoxyCodeLine{00012\ \ \ \textcolor{keyword}{private}:\ \ \textcolor{comment}{//passando\ as\ variaveis\ privadas:\ nome\ e\ um\ vetor\ de\ musicas}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{string}\ nome;}
+\DoxyCodeLine{00014\ \ \ \ \ vector<Musica>\ musica;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classPlaylist}{Playlist}}();\ \textcolor{comment}{//construtor\ da\ classe}}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classPlaylist}{\string~Playlist}}();\ \ \textcolor{comment}{//destrutor\ da\ classe}}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classPlaylist}{Playlist}}(\textcolor{keywordtype}{string}\ nome,\ vector<Musica>\ musica);\ \textcolor{comment}{//construtor\ com\ os\ parametros\ de\ nome\ e\ um\ vetor\ de\ musicas}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ setNome(\textcolor{keywordtype}{string}\ nome);\ \textcolor{comment}{//setando\ o\ nome\ do\ playlist}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ setMusica(\mbox{\hyperlink{classMusica}{Musica}}\ *m);\ \ \textcolor{comment}{//setando\ as\ musicas\ que\ serao\ passadas\ para\ o\ vetor}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{string}\ getNome()\ \textcolor{keyword}{const};\ \textcolor{comment}{//pegando\ o\ nome\ da\ playlist}}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classLista}{Lista<Musica>}}\ getMusica();\ \ \textcolor{comment}{//pegando\ as\ musicas\ presentes\ no\ vetor\ de\ musica}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ adicionarMusica(\mbox{\hyperlink{classMusica}{Musica}}\ m);\ \textcolor{comment}{//funcao\ para\ adicionar\ musicas\ ao\ vetor}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ removerMusica(\textcolor{keywordtype}{int}\ index);\ \textcolor{comment}{//funcao\ para\ remover\ musicas\ do\ vetor}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ editarPlaylist(\textcolor{keywordtype}{int}\ index,\ \mbox{\hyperlink{classMusica}{Musica}}\ newM);\ \textcolor{comment}{//funcao\ nao\ utilizada,\ mas\ sua\ ideia\ era\ para\ selecionar\ uma\ certa\ playlist\ e\ remover\ ou\ adicioanar\ musicas}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ printarPlaylist()\ \textcolor{keyword}{const};\ \textcolor{comment}{//funcao\ para\ printar\ os\ elementos\ da\ classe\ Playlist}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ ostream\&\ operator<<(ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classPlaylist}{Playlist}}\&\ playlist);\ \textcolor{comment}{//sobrecarga\ de\ operador\ na\ classe\ Playlist}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
