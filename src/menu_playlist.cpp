@@ -34,10 +34,9 @@ void adicionarPlaylist(){ //funcao para adicionar musicas a playlist
 
 };
 
-void editarPlaylist(){ //funcao que sem uso
-  int index;
+void editarPlaylist(){ //funcao para atualizar o nome da playlist e adicionar musicas
 
-  cout << "Selecione uma playlist: ";
+  adicionarPlaylist();
 
 };
 
