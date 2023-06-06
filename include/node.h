@@ -14,16 +14,16 @@ class Node{ //Escopo da classe Node
       this->next = nullptr; //e O ponteiro next é definido como nullptr, indicando que não há próximo nó conectado a este
     };
 
-    T &getData() {
+    T &getData() { //retorna o valor template do no
       return data;
     };
 
-    Node *getNext() {
+    Node *getNext() { //retorna o ponteiro do proximo no
       return next;
     };
 
-    void setData(T data);
-    void setNext(Node<T> *next);
+    void setData(T data); //altera o valor do no
+    void setNext(Node<T> *next); //altera o ponteiro para o proximo no
 };
 
 template<typename T>

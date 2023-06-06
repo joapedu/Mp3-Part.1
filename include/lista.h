@@ -9,22 +9,22 @@ template<typename T>
 class Lista { //criando a Classe da lista encadeada chamada de Lista usando um template chamado de T
   private:
     Node<T> *head; //ponteiro head para Node, representando o primeiro nó da lista encadeada
-    Node<T> *tail;
+    Node<T> *tail; //ponteiro tail para Node, representando o ultimo no da lista encadeada
 
   public:
     Lista() : head(nullptr){}; //construtor da classe
     Lista(const Lista<T> &other);
     ~Lista(){}; //destrutor da classe
     
-    Node<T> *getHead(){
+    Node<T> *getHead(){ //retorna o valor da cabeca da lista
       return head;
     };
 
-    Node<T> *getTail(){
+    Node<T> *getTail(){ //retorna o rabo da lista
       return tail;
     };
 
-    size_t getSize() const {
+    size_t getSize() const { //retorna o tamanho da lista encadeada
       size_t size = 0;
       Node<T> *curr = head;
 
@@ -50,7 +50,7 @@ class Lista { //criando a Classe da lista encadeada chamada de Lista usando um t
     
     };
 
-    void adicionarOutro(const Lista<T> &other){
+    void adicionarOutro(const Lista<T> &other){ //funcao para adicionar uma lista encadeada em outra
       Node<T> *currNode = other.getHead();
     
       while(currNode != nullptr){
@@ -84,7 +84,7 @@ class Lista { //criando a Classe da lista encadeada chamada de Lista usando um t
       } 
     };
 
-    int removerData(T data){
+    int removerData(T data){ //funcao para remover os elementos de uma lista 
       Node<T> *curr = head;
       Node<T> *prev = nullptr;
 
@@ -114,7 +114,33 @@ class Lista { //criando a Classe da lista encadeada chamada de Lista usando um t
       return 0;
     };
 
-    void limpar(){
+    void pop_back(){
+      if (head == nullptr) {
+        // A lista está vazia, não há nada para remover
+        return;
+      }
+    
+      Node<T> *curr = head;
+      Node<T> *prev = nullptr;
+
+      while (curr->getNext() != nullptr) {
+        prev = curr;
+        curr = curr->getNext();
+      }
+
+      if (prev != nullptr) {
+        prev->setNext(nullptr);
+        tail = prev;
+      } else {
+        // O último nó é o nó cabeça
+        head = nullptr;
+        tail = nullptr;
+      }
+
+      delete curr;
+    }
+
+    void limpar(){ //o metodo limpar server para apagar todos os elementos de uma lista encadeada
       Node<T> *prev = nullptr;
       Node<T> *curr = head;
 
@@ -144,7 +170,7 @@ class Lista { //criando a Classe da lista encadeada chamada de Lista usando um t
        }
     };
 
-    T* dataT(T data){
+    T* dataT(T data){ //funcao responsável por retornar se o elemento passado esta ou nao na lista encadeada
       Node<T> *curr = head;
 
       while(curr != nullptr){
@@ -169,28 +195,46 @@ class Lista { //criando a Classe da lista encadeada chamada de Lista usando um t
       std::cout << std::endl;  
     };
 
-    void printAux(Node<T> *curr){
+    void printAux(Node<T> *curr){ //printa os valores a partir do valor passado
       if(curr != nullptr){
           std::cout << curr->getData() << std::endl;
           printAux(curr->getNext());
       }
     };
 
-    void printRec(){
+    void printRec(){ //Imprime os elementos da lista de forma recursiva
       printAux(head);
     };
 
     Lista<T> operator+(Lista<T> &other);
+    const Lista<T> &operator>>(Node<T> &node);
+    const Lista<T> operator<<(const Node<T> &node);
 
 };
 
 template <typename T>
-Lista<T> Lista<T>::operator+(Lista<T> &other){
+Lista<T> Lista<T>::operator+(Lista<T> &other){ //sobrecarga no operador '+' para concatenar duas listas
     Lista<T> novaLista;
     novaLista.add(*this);
     novaLista.add(other);
 
     return novaLista;
+}
+
+template<typename T>
+const Lista<T> &Lista<T>::operator>>(Node<T> &node){ //sobrecarga no operador '>>' para remocao de um elemento da lista
+    if(head != nullptr){
+        node = tail;
+        pop_back();
+    }
+
+    return *this;
+}
+
+template <typename T>
+const Lista<T> Lista<T>::operator<<(const Node<T> &node){ //sobrecarga no operador '<<' para adicionar um elemento a lista
+    add(node.getValue());
+    return *this;
 }
 
 

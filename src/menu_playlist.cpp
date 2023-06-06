@@ -27,7 +27,7 @@ void adicionarPlaylist(){ //funcao para adicionar musicas a playlist
 
 };
 
-void editarPlaylist(){ //funcao para atualizar o nome da playlist e adicionar musicas
+void editarPlaylist(){ //funcao para adicionar musicas a playlist selecionada
   
   string playlistNome, musicaNome;
   int escolha;
@@ -41,9 +41,9 @@ void editarPlaylist(){ //funcao para atualizar o nome da playlist e adicionar mu
     return;
   }
 
-  Playlist* play = playlists.dataT(Playlist(playlistNome));
+  Playlist* play = playlists.dataT(Playlist(playlistNome)); //passando o nome da playlista para 'play' 
 
-  if(play == nullptr){
+  if(play == nullptr){ //caso a playlist nao exista ira exibir um erro
     cout << "Error Playlist\n";
     cout << "Valor Incorreto\n";
     return;
@@ -63,9 +63,9 @@ void editarPlaylist(){ //funcao para atualizar o nome da playlist e adicionar mu
       cout << "Digite o Nome da Musica que deseja adicionar: ";
       getline(cin.ignore(), musicaNome);
       
-      Musica* referMusica = lista.dataT(Musica(musicaNome));
+      Musica* referMusica = lista.dataT(Musica(musicaNome)); //pega os elementos da lista de musicas para a variavel referMusica
 
-      if(referMusica == nullptr){
+      if(referMusica == nullptr){ //verifica se a musica existe ou nao
         cout << "Digite uma musica valida" << endl;
       } else {
         play->adicionarMusica(*referMusica);
@@ -82,7 +82,7 @@ void editarPlaylist(){ //funcao para atualizar o nome da playlist e adicionar mu
       cout << "Digite o Nome da Musica que deseja remover da playlist: ";
       getline(cin.ignore(), musicaNome);
 
-      if(play->procurarMusica(Musica(musicaNome)) != nullptr){
+      if(play->procurarMusica(Musica(musicaNome)) != nullptr){ //verifica se a musica existe para que se remova ou nao
         play->removerMusica(Musica(musicaNome));
         cout << "A musica: " << musicaNome << "Foi removida da Playlist" << endl;
       } else {

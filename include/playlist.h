@@ -16,18 +16,18 @@ class Playlist{ //Criando classe Playlist
   public:
     Playlist(); //construtor da classe
     ~Playlist();  //destrutor da classe
-    Playlist(string nome);
-    Playlist(const Playlist &other);    
+    Playlist(string nome); //construtor somente com o valor do nome
+    Playlist(const Playlist &other); //construtor copia
 
     string getNome() const; //pegando o nome da playlist
     Lista<Musica> &getMusicas();  //pegando as musicas presentes no vetor de musica
 
     void adicionarMusica(Musica m); //funcao para adicionar musicas ao vetor
     void removerMusica(Musica m); //funcao para remover musicas do vetor
-    Musica *procurarMusica(Musica m);
+    Musica *procurarMusica(Musica m); //funcao para procurar determinada musica na playlist
     void printarPlaylist(); //funcao para printar os elementos da classe Playlist
 
-    bool operator==(Playlist &b);
+    bool operator==(Playlist &b); 
 
 };
 
