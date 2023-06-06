@@ -237,7 +237,6 @@ const Lista<T> Lista<T>::operator<<(const Node<T> &node){ //sobrecarga no operad
     return *this;
 }
 
-
 extern Lista<Musica> lista; //tornando o objeto lista global para ser utilizado nos arquivos de maneira mais prática
 
 #endif // !LISTA_H

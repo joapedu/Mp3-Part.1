@@ -82,7 +82,7 @@ void editarPlaylist(){ //funcao para adicionar musicas a playlist selecionada
       cout << "Digite o Nome da Musica que deseja remover da playlist: ";
       getline(cin.ignore(), musicaNome);
 
-      if(play->procurarMusica(Musica(musicaNome)) != nullptr){ //verifica se a musica existe para que se remova ou nao
+      if(play->procurarMusica(Musica(musicaNome)) != nullptr){
         play->removerMusica(Musica(musicaNome));
         cout << "A musica: " << musicaNome << "Foi removida da Playlist" << endl;
       } else {
@@ -111,19 +111,6 @@ void editarPlaylist(){ //funcao para adicionar musicas a playlist selecionada
 
 };
 
-void removerMus(){ //funcao para remover musicas da playlist
-
-  int indexMusica;
-
-  playlist.printarPlaylist(); //e printado as musicas novamente e o usuario devera escolher a que quer remover daquela playlist
-
-  cout << "Escolhas algum das musicas p/ remover pelo index: ";
-  cin >> indexMusica;
-  indexMusica -= 1; //passando o valor real para a vector, ja que se passar o valor digitado pelo usuario, nao sera o mesmo utilizado no vector
-
-
-};
-
 void playlistSelection(){ //funcao responsavel por gerenciar os menus da area de playlist
   
   int escolha;
@@ -131,7 +118,6 @@ void playlistSelection(){ //funcao responsavel por gerenciar os menus da area de
   cout << "1 - Criar Playlist " << endl;
   cout << "2 - Listar todas as Playlists" << endl;
   cout << "3 - Editar Playlist " << endl;
-  cout << "4 - Remover Musica" << endl;
   cout << "0 - Retornar " << endl;
 
   cin >> escolha;
@@ -147,10 +133,6 @@ void playlistSelection(){ //funcao responsavel por gerenciar os menus da area de
 
     case 3:
       editarPlaylist();
-      break;
-
-    case 4:
-      removerMus();
       break;
 
     case 0:

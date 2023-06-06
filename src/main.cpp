@@ -1,10 +1,11 @@
 #include <iostream>
 #include "menu_musica.cpp"
 #include "menu_playlist.cpp"
+#include "arquivo.cpp"
 
 using namespace std;
 
-int main(){
+void menuEscolhas(){
 
   int escolha; 
 
@@ -26,12 +27,41 @@ int main(){
 
     case 0:
       cout << "Finalizando o programa..." << endl;
-      return 0;
+      return;
 
     default:
       cout << "Opção Inválida" << endl; 
       break;
   }
 
-  return main(); //recursão
+
+  return menuEscolhas(); //recursão
+}
+
+int main(int argc, char *argv[]){
+  Lista<Playlist> playlists;
+  Lista<Musica> lista;
+
+  if(argc != 2){
+    cout << "O número de argumentos nao e valido! \n" << "Esperado 1 argumento (nome do arquivo).\n";
+    return 1;
+  }
+    
+  ifstream in_file;
+  in_file.open(argv[1]);  
+
+  if(!in_file.is_open()){
+    cout << "Erro ao abrir arquivo \"" << argv[1] << "\"!\n";
+    return 1;
+  }
+    
+  readArchive(in_file, lista, playlists); 
+
+  in_file.close();
+
+  menuEscolhas();
+
+  playlists.limpar();
+  lista.limpar();
+  return 0;
 }

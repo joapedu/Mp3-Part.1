@@ -144,4 +144,10 @@ CMakeFiles/mp3.dir/src/main.cpp.o: \
  /usr/include/c++/12.2.0/bits/stl_vector.h \
  /usr/include/c++/12.2.0/bits/stl_bvector.h \
  /usr/include/c++/12.2.0/bits/vector.tcc \
- /home/eduardo/Documentos/UF/lp1/unidade2/Mp3-Cpp/src/../include/lista.h
+ /home/eduardo/Documentos/UF/lp1/unidade2/Mp3-Cpp/src/../include/lista.h \
+ /home/eduardo/Documentos/UF/lp1/unidade2/Mp3-Cpp/src/arquivo.cpp \
+ /usr/include/c++/12.2.0/fstream /usr/include/c++/12.2.0/bits/codecvt.h \
+ /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/basic_file.h \
+ /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/c++io.h \
+ /usr/include/c++/12.2.0/bits/fstream.tcc /usr/include/c++/12.2.0/sstream \
+ /usr/include/c++/12.2.0/bits/sstream.tcc
