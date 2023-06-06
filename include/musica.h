@@ -11,6 +11,7 @@ class Musica{ //criando a classe Musica
   public: //ja as funcoes publicas temos:
     Musica(); //construtor da classe
     ~Musica(); //destrutor da classe
+    Musica(std::string titulo);
     Musica(std::string titulo, std::string artista); //construtor com os parametros privados
 
     void setTitulo(std::string titulo); //funcao para setar o titulo

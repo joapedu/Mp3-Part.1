@@ -38,10 +38,18 @@ void Playlist::adicionarMusica(Musica m){ //adiciona objetos da classe Musica no
 void Playlist::removerMusica(Musica m){
   getMusicas().removerData(m);
 };
+
+Musica *Playlist::procurarMusica(Musica m){
+  return getMusicas().dataT(m);
+};
  
 void Playlist::printarPlaylist(){ //printa os elementos da playlist
   getMusicas().printRec(); 
 };
+
+bool Playlist::operator==(Playlist &b){
+    return this->getNome() == b.getNome();
+}
 
 ostream& operator<<(ostream& os, const Playlist& playlist){ //sobrecarga de operador para a classe Playlist
   os << "Nome da Playlist: " << playlist.getNome() << endl; 

@@ -5,6 +5,10 @@ Musica::Musica(){}; //construtor da classe Musica
 
 Musica::~Musica(){}; //destrutor da classe Musica
 
+Musica::Musica(std::string titulo){
+  this->titulo = titulo;
+};
+
 Musica::Musica(std::string titulo, std::string artista){  //construtor que recebe os valores de titulo e artista
   this->titulo = titulo;
   this->artista = artista;

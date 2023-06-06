@@ -144,6 +144,19 @@ class Lista { //criando a Classe da lista encadeada chamada de Lista usando um t
        }
     };
 
+    T* dataT(T data){
+      Node<T> *curr = head;
+
+      while(curr != nullptr){
+        if(curr->getData() == data){
+            return &(curr->getData());
+        }
+        curr = curr->getNext();
+      }
+
+      return nullptr; 
+    };
+
     void printLista(){ //A função printLista imprime os elementos da lista percorrendo a lista a partir do primeiro nó (head) até o último nó
       int index; //Valor do index e utilizado para printar para o usuario
       Node<T> *temp = head;  
