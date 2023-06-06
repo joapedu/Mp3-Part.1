@@ -47,8 +47,41 @@ void Playlist::printarPlaylist(){ //printa os elementos da playlist
   getMusicas().printRec(); 
 };
 
-bool Playlist::operator==(Playlist &b){
+bool Playlist::operator==(Playlist &b){ //sobrecarga que retorna true caso o nome das playlists sejam iguais
     return this->getNome() == b.getNome();
+};
+
+Playlist Playlist::operator+(Musica &m){ //sobrecarga no operador '+' que adiciona uma musica a playlist retornada
+    Playlist newPlay(*this);
+    if(newPlay.procurarMusica(m) == nullptr){
+        newPlay.adicionarMusica(m);
+    }
+
+    return newPlay;
+};
+
+Playlist Playlist::operator-(Musica &m){ //sobrecarga no operador '-' que remove a musica da playlist que é retornada
+  Playlist newPlay(*this);
+  newPlay.removerMusica(m);
+
+  return newPlay;
+}
+
+Playlist& Playlist::operator>>(Musica &m){ //sobrecarga no operador '>>' que remove a ultima musica da playlist
+    if(musica.getHead() != nullptr){
+        m = musica.getTail()->getData();
+        this->musica.pop_back();
+    }
+
+    return *this;
+}
+
+Playlist& Playlist::operator<<(Musica &m){ //sobrecarga no operador '<<' que adiciona musica na ultima posicao da lista
+    if(procurarMusica(m)==nullptr){
+      this->adicionarMusica(m);
+    }
+
+    return *this;
 }
 
 ostream& operator<<(ostream& os, const Playlist& playlist){ //sobrecarga de operador para a classe Playlist

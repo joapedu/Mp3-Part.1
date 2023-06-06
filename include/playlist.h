@@ -27,7 +27,11 @@ class Playlist{ //Criando classe Playlist
     Musica *procurarMusica(Musica m); //funcao para procurar determinada musica na playlist
     void printarPlaylist(); //funcao para printar os elementos da classe Playlist
 
-    bool operator==(Playlist &b); 
+    bool operator==(Playlist &b); //sobrecarga de operador que retorna um booleano
+    Playlist operator+(Musica &m); //sobrecarga no operador '+'
+    Playlist operator-(Musica &m); //sobrecarga no operador '-'
+    Playlist& operator>>(Musica &m); //sobrecarga no operador '>>'
+    Playlist& operator<<(Musica &m); //sobrecarga no operador '<<'
 
 };
 
