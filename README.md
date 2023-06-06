@@ -1,4 +1,4 @@
-<h1 align="center">📖 College Project Part. 1 📖</h1>
+<h1 align="center">📖 College Project 📖</h1>
 
 <div align="center">
 <h4>⭐️ Project making a Mp3 using C++ at the college subject "Programing Language". ⭐️</h4>

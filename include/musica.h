@@ -20,6 +20,7 @@ class Musica{ //criando a classe Musica
     std::string getArtista() const; //pegando o artista da musica
     void imprimirDados(); //imprimindo os dados da musica
 
+    bool operator==(Musica &b);
 
 };
 

@@ -31,6 +31,10 @@ void Musica::imprimirDados(){ //imprime os dados da musica caso seja chamado no 
   std::cout << "Artista: " << artista << std::endl;
 }
 
+bool Musica::operator==(Musica &b){
+    return this->getTitulo() == b.getTitulo();
+}
+
 std::ostream& operator<<(std::ostream& os, const Musica& musica){ //sobrecarga de operador na classe Musica
   os << musica.getTitulo() << " - " << musica.getArtista() << std::endl;  //separando os dados do seguinte exemplo: "One - Metallica"
 

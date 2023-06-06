@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "../include/playlist.h"
 #include "../include/lista.h"
 #include "../include/musica.h"
@@ -6,37 +7,28 @@
 using namespace std;
 
 Playlist playlist;
-
+Lista<Playlist> playlists;
 
 void listarPlaylist(){ //lista a playlist criada
 
-  playlist.printarPlaylist(); //chamando a funcao da classe Playlist
+
 
 };
 
 void adicionarPlaylist(){ //funcao para adicionar musicas a playlist
 
-  string nome;
-  int index;
+  string playlistNome;
  
   cout << "Digite o nome da Playlist: ";
-  cin >> nome;
+  getline(cin.ignore(), playlistNome);
 
-  lista.printLista(); //printando a lista de musicas cadastradas
-
-  cout << "Selecione a música pelo seu indice: ";
-  cin >> index;
-
-  playlist.setNome(nome); //setando o nome da playlist
-  playlist.adicionarMusica(lista.dataIndex(index)); /* a funcao adicionarMusica precisa de um objeto da classe musica
-                                                      para isto ocorrer pelo index, é necessario passar o valor retornado da função
-                                                      dataIndex, que por sua vez contém o valor indicado pelo usuario */
+  playlists.adicionar(Playlist(playlistNome));
 
 };
 
 void editarPlaylist(){ //funcao para atualizar o nome da playlist e adicionar musicas
 
-  adicionarPlaylist();
+  playlist.printarPlaylist();
 
 };
 
@@ -50,7 +42,6 @@ void removerMus(){ //funcao para remover musicas da playlist
   cin >> indexMusica;
   indexMusica -= 1; //passando o valor real para a vector, ja que se passar o valor digitado pelo usuario, nao sera o mesmo utilizado no vector
 
-  playlist.removerMusica(indexMusica); //chamando a funcao para remover
 
 };
 
