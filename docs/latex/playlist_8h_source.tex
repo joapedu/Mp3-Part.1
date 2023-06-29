@@ -1,0 +1,46 @@
+\hypertarget{playlist_8h_source}{}\doxysection{playlist.\+h}
+\label{playlist_8h_source}\index{include/playlist.h@{include/playlist.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}musica.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}lista.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ PLAYLIST\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ PLAYLIST\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPlaylist}{Playlist}}\{\ \textcolor{comment}{//Criando\ classe\ Playlist}}
+\DoxyCodeLine{00012\ \ \ \textcolor{keyword}{private}:\ \ \textcolor{comment}{//passando\ as\ variaveis\ privadas:\ nome\ e\ um\ vetor\ de\ musicas}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{string}\ nome;}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classLista}{Lista<Musica>}}\ musica;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classPlaylist}{Playlist}}();\ \textcolor{comment}{//construtor\ da\ classe}}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classPlaylist}{\string~Playlist}}();\ \ \textcolor{comment}{//destrutor\ da\ classe}}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classPlaylist}{Playlist}}(\textcolor{keywordtype}{string}\ nome);\ \textcolor{comment}{//construtor\ somente\ com\ o\ valor\ do\ nome}}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classPlaylist}{Playlist}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPlaylist}{Playlist}}\ \&other);\ \textcolor{comment}{//construtor\ copia}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{string}\ getNome()\ \textcolor{keyword}{const};\ \textcolor{comment}{//pegando\ o\ nome\ da\ playlist}}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classLista}{Lista<Musica>}}\ \&getMusicas();\ \ \textcolor{comment}{//pegando\ as\ musicas\ presentes\ no\ vetor\ de\ musica}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ adicionarMusica(\mbox{\hyperlink{classMusica}{Musica}}\ m);\ \textcolor{comment}{//funcao\ para\ adicionar\ musicas\ ao\ vetor}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ removerMusica(\mbox{\hyperlink{classMusica}{Musica}}\ m);\ \textcolor{comment}{//funcao\ para\ remover\ musicas\ do\ vetor}}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{classMusica}{Musica}}\ *procurarMusica(\mbox{\hyperlink{classMusica}{Musica}}\ m);\ \textcolor{comment}{//funcao\ para\ procurar\ determinada\ musica\ na\ playlist}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ printarPlaylist();\ \textcolor{comment}{//funcao\ para\ printar\ os\ elementos\ da\ classe\ Playlist}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator==(\mbox{\hyperlink{classPlaylist}{Playlist}}\ \&b);\ \textcolor{comment}{//sobrecarga\ de\ operador\ que\ retorna\ um\ booleano}}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classPlaylist}{Playlist}}\ operator+(\mbox{\hyperlink{classMusica}{Musica}}\ \&m);\ \textcolor{comment}{//sobrecarga\ no\ operador\ '+'}}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classPlaylist}{Playlist}}\ operator-\/(\mbox{\hyperlink{classMusica}{Musica}}\ \&m);\ \textcolor{comment}{//sobrecarga\ no\ operador\ '-\/'}}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classPlaylist}{Playlist}}\&\ operator>>(\mbox{\hyperlink{classMusica}{Musica}}\ \&m);\ \textcolor{comment}{//sobrecarga\ no\ operador\ '>>'}}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classPlaylist}{Playlist}}\&\ operator<<(\mbox{\hyperlink{classMusica}{Musica}}\ \&m);\ \textcolor{comment}{//sobrecarga\ no\ operador\ '<<'}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ ostream\&\ operator<<(ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classPlaylist}{Playlist}}\&\ playlist);\ \textcolor{comment}{//sobrecarga\ de\ operador\ na\ classe\ Playlist}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

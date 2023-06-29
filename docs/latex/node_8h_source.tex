@@ -1,0 +1,46 @@
+\hypertarget{node_8h_source}{}\doxysection{node.\+h}
+\label{node_8h_source}\index{include/node.h@{include/node.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifndef\ NODE\_H}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ NODE\_H}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ \textcolor{comment}{//criando\ um\ valor\ template\ chamado\ de\ T}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classNode}{Node}}\{\ \textcolor{comment}{//Escopo\ da\ classe\ Node\ }}
+\DoxyCodeLine{00008\ \ \ \textcolor{keyword}{public}:\ \textcolor{comment}{//todos\ os\ valores\ da\ classe\ sao\ publicos}}
+\DoxyCodeLine{00009\ \ \ \ \ T\ data;\ \textcolor{comment}{//sendo\ eles\ um\ valor\ template\ qualquer\ chamado\ de\ data}}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{classNode}{Node}}*\ next;\ \textcolor{comment}{//e\ um\ ponteiro\ para\ o\ proximo\ nó\ da\ lista}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{classNode}{Node}}(T\ data)\ \{\ \textcolor{comment}{//o\ construtor\ e\ definido\ para\ receber\ dois\ parametros}}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ this-\/>data\ =\ data;\ \ \textcolor{comment}{//data,\ que\ é\ usado\ para\ inicializar\ o\ membro\ data\ do\ nó}}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ this-\/>next\ =\ \textcolor{keyword}{nullptr};\ \textcolor{comment}{//e\ O\ ponteiro\ next\ é\ definido\ como\ nullptr,\ indicando\ que\ não\ há\ próximo\ nó\ conectado\ a\ este}}
+\DoxyCodeLine{00015\ \ \ \ \ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ T\ \&getData()\ \{\ \textcolor{comment}{//retorna\ o\ valor\ template\ do\ no}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ data;}
+\DoxyCodeLine{00019\ \ \ \ \ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classNode}{Node}}\ *getNext()\ \{\ \textcolor{comment}{//retorna\ o\ ponteiro\ do\ proximo\ no}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ next;}
+\DoxyCodeLine{00023\ \ \ \ \ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ setData(T\ data);\ \textcolor{comment}{//altera\ o\ valor\ do\ no}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ setNext(\mbox{\hyperlink{classNode}{Node<T>}}\ *next);\ \textcolor{comment}{//altera\ o\ ponteiro\ para\ o\ proximo\ no}}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNode}{Node<T>::setData}}(T\ data)\{}
+\DoxyCodeLine{00031\ \ \ this-\/>data\ =\ data;}
+\DoxyCodeLine{00032\ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNode}{Node<T>::setNext}}(\mbox{\hyperlink{classNode}{Node<T>}}\ *next)\{}
+\DoxyCodeLine{00036\ \ \ \ \ this-\/>next\ =\ next;}
+\DoxyCodeLine{00037\ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !NODE\_H}}
+\DoxyCodeLine{00040\ }
+
+\end{DoxyCode}

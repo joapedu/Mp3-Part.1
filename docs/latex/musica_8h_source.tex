@@ -1,0 +1,42 @@
+\hypertarget{musica_8h_source}{}\doxysection{musica.\+h}
+\label{musica_8h_source}\index{include/musica.h@{include/musica.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifndef\ MUSICA\_H\ \ }}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ MUSICA\_H}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMusica}{Musica}}\{\ \textcolor{comment}{//criando\ a\ classe\ Musica}}
+\DoxyCodeLine{00007\ \ \ \textcolor{keyword}{private}:\ \textcolor{comment}{//com\ os\ seguintes\ valores\ privados:\ titulo\ e\ artista}}
+\DoxyCodeLine{00008\ \ \ \ \ std::string\ titulo;}
+\DoxyCodeLine{00009\ \ \ \ \ std::string\ artista;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \textcolor{keyword}{public}:\ \textcolor{comment}{//ja\ as\ funcoes\ publicas\ temos:}}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{classMusica}{Musica}}();\ \textcolor{comment}{//construtor\ da\ classe}}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classMusica}{\string~Musica}}();\ \textcolor{comment}{//destrutor\ da\ classe}}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classMusica}{Musica}}(std::string\ titulo);\ \textcolor{comment}{//construtor\ da\ classe\ somente\ com\ o\ nome}}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classMusica}{Musica}}(std::string\ titulo,\ std::string\ artista);\ \textcolor{comment}{//construtor\ com\ os\ parametros\ privados}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ setTitulo(std::string\ titulo);\ \textcolor{comment}{//funcao\ para\ setar\ o\ titulo}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ setArtista(std::string\ artista);\ \textcolor{comment}{//funcao\ para\ setar\ o\ artista}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ std::string\ getTitulo()\ \textcolor{keyword}{const};\ \ \textcolor{comment}{//pegando\ o\ titulo\ da\ musica}}
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ getArtista()\ \textcolor{keyword}{const};\ \textcolor{comment}{//pegando\ o\ artista\ da\ musica}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ imprimirDados();\ \textcolor{comment}{//imprimindo\ os\ dados\ da\ musica}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator==(\mbox{\hyperlink{classMusica}{Musica}}\ \&b);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMusica}{Musica}}\&\ musica);\ \textcolor{comment}{//sobrecarga\ de\ operador\ na\ classe\ Musica}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ }
+
+\end{DoxyCode}
