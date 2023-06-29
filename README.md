@@ -7,22 +7,13 @@
 </div>
 
 ### Passos Para Compilação ->
-#### No terminal, dentro da pasta  */build*  do projeto, digite:
+#### No terminal, dentro da pasta  raiz  do projeto, digite:
 
 ```cmd
-$ cd .. 
-```
-```cmd
-$ rm -rf build
-```
-```cmd
-$ mkdir build
+$ cmake -B build
 ```
 ```cmd
 $ cd build
-```
-```cmd
-$ cmake ..
 ```
 ```cmd
 $ make
@@ -30,8 +21,8 @@ $ make
 
 ### Rodar o programa ->
  - Após a compilação exemplificada no passo anterior, o programa deve ficar dentro da pasta */build* situado como *"mp3"*.
- - Portanto, abra a pasta *"build"* e rode o programa com: 
-```ts
+ - Portanto, dentro da pasta *"build"* rode o programa com: 
+```cmd
 $ ./mp3
 ```
 <h3 align="center"> 👾 Colaborador: <a href="https://github.com/joapedu"><strong>@joapedu</strong></a> <br />João Eduardo - 20220035851</h3>
