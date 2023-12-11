@@ -183,15 +183,17 @@ class Lista { //criando a Classe da lista encadeada chamada de Lista usando um t
       return nullptr; 
     };
 
-    void printLista(){ //A função printLista imprime os elementos da lista percorrendo a lista a partir do primeiro nó (head) até o último nó
-      int index; //Valor do index e utilizado para printar para o usuario
-      Node<T> *temp = head;  
-      while (temp != nullptr) { //Verifica se tem elementos na lista
-        index++; //adiciona +1 para cada elemento na lista para index
+    void printLista(){ // A função printLista imprime os elementos da lista percorrendo a lista a partir do primeiro nó (head) até o último nó
+      int index = 0; // Valor do index inicializado
+      Node<T> *temp = head;
+
+      while (temp != nullptr) { // Verifica se tem elementos na lista
+        index++; // Adiciona +1 para cada elemento na lista para index
         std::cout << "\n" << std::endl;
-        std::cout << index << " " << temp->data << "" << std::endl; //Imprimindo os valores de index e o valor da lista  
+        std::cout << index << " " << temp->data << "" << std::endl; // Imprimindo os valores de index e o valor da lista  
         temp = temp->next;  
-      }  
+      }
+
       std::cout << std::endl;  
     };
 
